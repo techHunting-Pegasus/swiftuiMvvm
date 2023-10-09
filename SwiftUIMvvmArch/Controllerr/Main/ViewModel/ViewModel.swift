@@ -8,12 +8,6 @@
 import Foundation
 import Combine
 
-enum AppType {
-    case appointment
-    case getuser
-    case postApi
-    case none
-}
 
 class ViewModel: ObservableObject {
     private var apiService = APIService()
@@ -21,7 +15,7 @@ class ViewModel: ObservableObject {
     @Published var appResponse: AppResponse = AppResponse()
     @Published var error: Error?
     @Published var isLoading = false
-    @Published var type: AppType = .none
+
     
     let commonRequest = CommonRequest()
     
@@ -46,7 +40,7 @@ class ViewModel: ObservableObject {
     
     func getPerson() {
         isLoading = true
-        apiService.apiHandler(endpoint: Constant.endpoint.person1, parameters: commonRequest, method: .get, objectType: Person.self)
+        apiService.apiHandler(endpoint: Constant.endpoint.all, parameters: commonRequest, method: .get, objectType: [Country].self)
             .sink(receiveCompletion: { [weak self] completion in
                 self?.isLoading = false
                 switch completion {
@@ -56,8 +50,9 @@ class ViewModel: ObservableObject {
                     self?.error = error
                 }
             }, receiveValue: { [weak self] res in
-                self?.type = .getuser
-                self?.appResponse.person = res
+                
+                self?.appResponse.country = res
+//                AppDefaults.userData = res
             })
             .store(in: &cancellables)
     }
@@ -74,7 +69,7 @@ class ViewModel: ObservableObject {
                     self?.error = error
                 }
             }, receiveValue: { [weak self] res in
-                self?.type = .postApi
+                
                 self?.appResponse.createuUser = res
             })
             .store(in: &cancellables)

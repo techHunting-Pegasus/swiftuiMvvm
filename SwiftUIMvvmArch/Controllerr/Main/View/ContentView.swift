@@ -4,59 +4,63 @@
 //
 //  Created by John on 06/10/23.
 //
-
+import UIKit
 import SwiftUI
 
+
+
 struct ContentView: View {
-    
     @ObservedObject var viewModel: ViewModel = ViewModel()
-    
-  
+    @State private var isLoaderShowing = false
+    @State private var showErrorAlert = false
+   
     var body: some View {
-        VStack {
-            
 
+        ZStack {
+            VStack{
+                    let person = viewModel.appResponse.country
+                      Button(action: {
+                          viewModel.getPerson()
+                      }) {
+                          Text("Hit API")
+                              .font(.system(size: 20))
+                      }
+                      .padding()
+                      Spacer()
+                //MARK: single dictionary data
+//                    Text("Name: \(person.name ?? (AppDefaults.userData?.name ?? "ishpreet"))")
+//                      Spacer()
+//                    Text("Height: \(person.height ?? (AppDefaults.userData?.height ?? "184"))")
+//                      Spacer()
+                //MARK: array dictionary data
+                List(viewModel.appResponse.country, id: \.cca2) { country in
+                    Text(country.name?.common ?? "")
+                          }
+                
+            }.opacity(viewModel.isLoading ? 0.5 : 1.0)
             if viewModel.isLoading {
-                // Show ProgressView when isLoading is true
-                ProgressView("Loading...")
-            } else {
-                let person = viewModel.appResponse.person // Non-optional Person
-                Text("Name: \(person.name ?? "ishpreet")")
-                Text("Height: \(person.height ?? "184")")
+                
+                LoaderView(isShowing: $isLoaderShowing)
+                    .onAppear {
+                        isLoaderShowing = true
+                    }
             }
-
-            if let error = viewModel.error {
-                // Show error message when error is not nil
-                Text("Error: \(error.localizedDescription)")
-            } else if !viewModel.isLoading {
-                // Show the "Hit API" button when isLoading is false
-                Button {
-                    viewModel.getPerson()
-                } label: {
-                    Text("Hit API").font(.system(size: 20))
-                }
-            } else {
-                // Show "Data not available" when none of the above conditions are met
-                Text("Data not available")
-            }
-
+        }.onAppear{
+            viewModel.getPerson()
         }
         .padding()
-        .onReceive(viewModel.$type) { newType in
-            switch newType {
-            case .getuser:
-                print("res")
-            case .appointment:
-                print("")
-            case .postApi:
-                print("hello api hit successfully")
-            case .none:
-                break
+        .errorAlert(isPresented: $showErrorAlert, title: "", message: "\(viewModel.error?.localizedDescription ?? "Screeen Eror")")
+        .onReceive(viewModel.$error) { error in
+            if error != nil {
+                showErrorAlert = true
             }
         }
     }
+   
 }
 
 #Preview {
     ContentView()
 }
+
+

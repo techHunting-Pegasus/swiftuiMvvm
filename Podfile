@@ -7,5 +7,6 @@ target 'SwiftUIMvvmArch' do
 
   # Pods for SwiftUIMvvmArch
 pod 'Alamofire', '~> 5.6'
+pod 'lottie-ios'
 
 end

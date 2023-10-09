@@ -103,3 +103,87 @@ struct DataClass: JsonDeserializer, Hashable, Decodable {
         id = values?["id"] as? Int
     }
 }
+
+
+
+struct Country: Codable {
+    let name: Name?
+    let tld: [String]?
+    let cca2: String?
+    let ccn3: String?
+    let cca3: String?
+    let independent: Bool?
+    let status: String?
+    let unMember: Bool?
+    let currencies: [String: Currency]?
+    let idd: ID?
+    let capital: [String]?
+    let altSpellings: [String]?
+    let region: String?
+    let subregion: String?
+    let languages: [String: String]?
+    let translations: Translations?
+    let latlng: [Double]?
+    let landlocked: Bool?
+    let area: Double?
+    let demonyms: [String: Demonym]?
+    let flag: String?
+    let maps: [String: String]?
+    let population: Int?
+    let car: Car?
+    let timezones: [String]?
+    let continents: [String]?
+    let flags: [String: String]?
+    let coatOfArms: [String: String]?
+    let startOfWeek: String?
+    let capitalInfo: CapitalInfo?
+//    let postalCode: PostalCode
+}
+
+struct Name: Codable {
+    let common: String?
+    let official: String?
+    let nativeName: NativeName?
+}
+
+struct NativeName: Codable {
+    let fra: NameTranslations?
+}
+
+struct NameTranslations: Codable {
+    let official: String?
+    let common: String?
+}
+
+struct Currency: Codable {
+    let name: String?
+    let symbol: String?
+}
+
+struct ID: Codable {
+    let root: String?
+    let suffixes: [String]?
+}
+
+struct Translations: Codable {
+    // Add translation properties for other languages here
+    let ara: NameTranslations?
+    let bre: NameTranslations?
+    let ces: NameTranslations?
+    // ... (other languages)
+}
+
+struct Demonym: Codable {
+    let f: String?
+    let m: String?
+}
+
+struct Car: Codable {
+    let signs: [String]?
+    let side: String?
+}
+
+struct CapitalInfo: Codable {
+    let latlng: [Double]?
+}
+

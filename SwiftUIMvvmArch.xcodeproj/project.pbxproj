@@ -21,6 +21,8 @@
 		522E7A812AD039E70098339E /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E7A802AD039E70098339E /* ApiRequest.swift */; };
 		522E7A852AD03A210098339E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E7A842AD03A210098339E /* ViewModel.swift */; };
 		522E7A882AD03A370098339E /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E7A872AD03A370098339E /* model.swift */; };
+		52A4D3BE2AD3EA3E0081C589 /* LodderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4D3BD2AD3EA3E0081C589 /* LodderView.swift */; };
+		52A4D3C02AD3F0420081C589 /* animation_lnimmxl6.json in Resources */ = {isa = PBXBuildFile; fileRef = 52A4D3BF2AD3F0420081C589 /* animation_lnimmxl6.json */; };
 		CCA50C0B4FEAFF7A961D0DFD /* Pods_SwiftUIMvvmArch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EC2A4A982489DB60AD693E /* Pods_SwiftUIMvvmArch.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		522E7A802AD039E70098339E /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		522E7A842AD03A210098339E /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		522E7A872AD03A370098339E /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		52A4D3BD2AD3EA3E0081C589 /* LodderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodderView.swift; sourceTree = "<group>"; };
+		52A4D3BF2AD3F0420081C589 /* animation_lnimmxl6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation_lnimmxl6.json; sourceTree = "<group>"; };
 		B7EC2A4A982489DB60AD693E /* Pods_SwiftUIMvvmArch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIMvvmArch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4271402FE5286E83A2B77B /* Pods-SwiftUIMvvmArch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIMvvmArch.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIMvvmArch/Pods-SwiftUIMvvmArch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,10 +85,12 @@
 				522E7A5A2AD036790098339E /* Preview Content */,
 				522E7A7C2AD039990098339E /* Controllerr */,
 				522E7A542AD036780098339E /* SwiftUIMvvmArchApp.swift */,
+				52A4D3BF2AD3F0420081C589 /* animation_lnimmxl6.json */,
 				522E7A582AD036790098339E /* Assets.xcassets */,
 				522E7A762AD039430098339E /* Apiresponse */,
 				522E7A792AD0397D0098339E /* Baseclass */,
 				522E7A662AD038860098339E /* Helper */,
+				52A4D3BD2AD3EA3E0081C589 /* LodderView.swift */,
 			);
 			path = SwiftUIMvvmArch;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 			files = (
 				522E7A5C2AD036790098339E /* Preview Assets.xcassets in Resources */,
 				522E7A592AD036790098339E /* Assets.xcassets in Resources */,
+				52A4D3C02AD3F0420081C589 /* animation_lnimmxl6.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +356,7 @@
 				522E7A882AD03A370098339E /* model.swift in Sources */,
 				522E7A752AD039320098339E /* Constants.swift in Sources */,
 				522E7A6C2AD038C40098339E /* ApiService.swift in Sources */,
+				52A4D3BE2AD3EA3E0081C589 /* LodderView.swift in Sources */,
 				522E7A812AD039E70098339E /* ApiRequest.swift in Sources */,
 				522E7A552AD036780098339E /* SwiftUIMvvmArchApp.swift in Sources */,
 			);
