@@ -57,23 +57,23 @@ import Lottie
 //}
 
 class BaseViewModel: ObservableObject {
-    var subscriptions = Set<AnyCancellable>()
-
-    init() {
-        Networklost()
-    }
-
-    func Networklost() {
-        Reachability.shared.publisher
-            .sink { path in
-                if path.isReachable {
-                    print("isOn")
-                } else {
-                    print("isOff")
-                }
-            }
-            .store(in: &subscriptions)
-    }
+//    var subscriptions = Set<AnyCancellable>()
+//
+//    init() {
+//        Networklost()
+//    }
+//
+//    func Networklost() {
+//        Reachability.shared.publisher
+//            .sink { path in
+//                if path.isReachable {
+//                    print("isOn")
+//                } else {
+//                    print("isOff")
+//                }
+//            }
+//            .store(in: &subscriptions)
+//    }
   
 
 

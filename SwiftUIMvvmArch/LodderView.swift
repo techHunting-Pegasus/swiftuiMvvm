@@ -49,13 +49,12 @@ struct LottieView: UIViewRepresentable {
 
 struct LoaderView :View{
     @Binding var isShowing: Bool
-//    var content: Content
+
    
 
     var body: some View {
         ZStack {
-//            content
-//                .opacity(0.3)
+
             
             if isShowing {
 
@@ -63,8 +62,6 @@ struct LoaderView :View{
                 LottieView(animationName: "animation_lnimmxl6.json")
                     .frame(width: 50, height: 50)
                                            
-                                          
-                    
            
             }
         }

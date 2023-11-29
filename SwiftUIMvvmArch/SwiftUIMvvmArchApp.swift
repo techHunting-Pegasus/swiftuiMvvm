@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct SwiftUIMvvmArchApp: App {
+  
+    let networkMonitor = NetworkMonitor()
+    let networkViewPresenter = NetworkViewPresenter(networkMonitor: NetworkMonitor())
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(networkMonitor)
+                .environmentObject(networkViewPresenter)
+
         }
     }
 }

@@ -13,9 +13,10 @@ import Combine
 class APIService{
   //static let shared = APIService()
 //    var headers:HTTPHeaders = [:]
-    
+//    
     let headers : HTTPHeaders = ["Content-Type":"application/json",
                                  "Authorization":"Bearer \(AppDefaults.accessToken)"]
+
  
     private let sessionManager: Session = {
         let configuration = URLSessionConfiguration.af.default
