@@ -42,3 +42,38 @@ after that use the next screeen use this  CustomNavContainerView
                 NavigationLink("",destination: ThirdView() , isActive: $isThirdScreen)
             }
         })
+********************************************
+
+
+use these variable with  for ussage :-
+
+    var isBackButtonhidden :Bool
+    var isBackButtonTextHidden :Bool
+    var isCentreTittleImagehidden : Bool
+    var isTittlehidden : Bool
+    var isSubTittleHidden : Bool
+    var isTrallingImageOneHidden :Bool
+    var isTrallingImageTwoHidden :Bool
+    var isLeadingButtonHidden : Bool
+    var  isbackButtonImage : Image
+    var leadingButtonimage :Image
+    var lbBackButton :String
+    var titleFont: CGFloat
+    var subTitleFont: CGFloat
+    var backButtonTextFont: CGFloat
+    var lbSubTitle :String
+    var isCentreTittleImage :Image
+    var isTrallingImageSecond :Image
+    var isTrallingImageFirst :Image
+    var backgroundColor :Color
+    var backgroundimage :Image
+    var isBackGroundImageSet :Bool
+    var backButtonImageSize: CGSize
+    var leadingButtonImageSize: CGSize
+    var centerTitleImageSize: CGSize
+    var firstTrailingImageSize: CGSize
+    var secondTrailingImageSize: CGSize
+    var backButtonAction: (() -> Void)?
+    var leadingButtonCallBack: (() -> Void)?
+    var tralingFirstButtonCallBack: (() -> Void)?
+    var tralingSecondButtonCallBack: (() -> Void)?

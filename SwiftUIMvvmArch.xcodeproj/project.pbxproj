@@ -21,12 +21,39 @@
 		522E7A812AD039E70098339E /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E7A802AD039E70098339E /* ApiRequest.swift */; };
 		522E7A852AD03A210098339E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E7A842AD03A210098339E /* ViewModel.swift */; };
 		522E7A882AD03A370098339E /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522E7A872AD03A370098339E /* model.swift */; };
+		524E6FA22B2C2502005DDB39 /* SocialSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E6F9E2B2C24F2005DDB39 /* SocialSignInModel.swift */; };
+		524E6FA72B2C30C8005DDB39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E6FA62B2C30C8005DDB39 /* AppDelegate.swift */; };
+		524E6FA92B2C31AF005DDB39 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 524E6FA82B2C31AF005DDB39 /* GoogleService-Info.plist */; };
+		524E6FB22B2C3B24005DDB39 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E6FB12B2C3B24005DDB39 /* AuthenticationManager.swift */; };
+		526625962B2C6983005878E4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 526625952B2C6983005878E4 /* Lottie */; };
+		5266259A2B2C8430005878E4 /* SocialLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526625992B2C8430005878E4 /* SocialLoginView.swift */; };
 		527A6F6B2B174C4900AD0DEC /* NetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A6F6A2B174C4900AD0DEC /* NetworkView.swift */; };
 		527A6F6D2B17696700AD0DEC /* NetworkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527A6F6C2B17696700AD0DEC /* NetworkPresenter.swift */; };
 		52A4D3BE2AD3EA3E0081C589 /* LodderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4D3BD2AD3EA3E0081C589 /* LodderView.swift */; };
 		52A4D3C02AD3F0420081C589 /* animation_lnimmxl6.json in Resources */ = {isa = PBXBuildFile; fileRef = 52A4D3BF2AD3F0420081C589 /* animation_lnimmxl6.json */; };
+		52E819692B45309400FC0358 /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E819652B45309300FC0358 /* CustomTabBarContainerView.swift */; };
+		52E8196A2B45309400FC0358 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E819662B45309300FC0358 /* CustomTabBarView.swift */; };
+		52E8196B2B45309400FC0358 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E819672B45309400FC0358 /* TabBarItem.swift */; };
+		52E8196C2B45309400FC0358 /* TabBarItemPrefrenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E819682B45309400FC0358 /* TabBarItemPrefrenceKey.swift */; };
+		52E8196D2B4530A000FC0358 /* CustomTabBarUssageReadme.md in Resources */ = {isa = PBXBuildFile; fileRef = 52E819632B45305900FC0358 /* CustomTabBarUssageReadme.md */; };
+		52E819732B45311100FC0358 /* CustomNavContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E819702B45311000FC0358 /* CustomNavContainerView.swift */; };
+		52E819742B45311100FC0358 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E819712B45311000FC0358 /* CustomNavView.swift */; };
+		52E819752B45311100FC0358 /* CustomNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E819722B45311100FC0358 /* CustomNavBarView.swift */; };
 		CCA50C0B4FEAFF7A961D0DFD /* Pods_SwiftUIMvvmArch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EC2A4A982489DB60AD693E /* Pods_SwiftUIMvvmArch.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		522242A12B31912D00A212DF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		18A3D84D6F58257191BAEF8C /* Pods-SwiftUIMvvmArch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIMvvmArch.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIMvvmArch/Pods-SwiftUIMvvmArch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -45,10 +72,26 @@
 		522E7A802AD039E70098339E /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		522E7A842AD03A210098339E /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		522E7A872AD03A370098339E /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		524E6F9E2B2C24F2005DDB39 /* SocialSignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSignInModel.swift; sourceTree = "<group>"; };
+		524E6FA62B2C30C8005DDB39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		524E6FA82B2C31AF005DDB39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		524E6FB12B2C3B24005DDB39 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		524E6FB32B2C40C8005DDB39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		526625972B2C784A005878E4 /* SwiftUIMvvmArch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIMvvmArch.entitlements; sourceTree = "<group>"; };
+		526625992B2C8430005878E4 /* SocialLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginView.swift; sourceTree = "<group>"; };
 		527A6F6A2B174C4900AD0DEC /* NetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkView.swift; sourceTree = "<group>"; };
 		527A6F6C2B17696700AD0DEC /* NetworkPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPresenter.swift; sourceTree = "<group>"; };
 		52A4D3BD2AD3EA3E0081C589 /* LodderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodderView.swift; sourceTree = "<group>"; };
 		52A4D3BF2AD3F0420081C589 /* animation_lnimmxl6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation_lnimmxl6.json; sourceTree = "<group>"; };
+		52E819632B45305900FC0358 /* CustomTabBarUssageReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CustomTabBarUssageReadme.md; sourceTree = "<group>"; };
+		52E819652B45309300FC0358 /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
+		52E819662B45309300FC0358 /* CustomTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		52E819672B45309400FC0358 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		52E819682B45309400FC0358 /* TabBarItemPrefrenceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemPrefrenceKey.swift; sourceTree = "<group>"; };
+		52E8196E2B4530D500FC0358 /* customNavigationUssageReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = customNavigationUssageReadme.md; sourceTree = "<group>"; };
+		52E819702B45311000FC0358 /* CustomNavContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavContainerView.swift; sourceTree = "<group>"; };
+		52E819712B45311000FC0358 /* CustomNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
+		52E819722B45311100FC0358 /* CustomNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavBarView.swift; sourceTree = "<group>"; };
 		B7EC2A4A982489DB60AD693E /* Pods_SwiftUIMvvmArch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIMvvmArch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4271402FE5286E83A2B77B /* Pods-SwiftUIMvvmArch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIMvvmArch.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIMvvmArch/Pods-SwiftUIMvvmArch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCA50C0B4FEAFF7A961D0DFD /* Pods_SwiftUIMvvmArch.framework in Frameworks */,
+				526625962B2C6983005878E4 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +130,11 @@
 		522E7A532AD036780098339E /* SwiftUIMvvmArch */ = {
 			isa = PBXGroup;
 			children = (
+				52E8196F2B4530EB00FC0358 /* CustomNavigationBar */,
+				52E819642B45306800FC0358 /* CustomTabBar */,
+				526625972B2C784A005878E4 /* SwiftUIMvvmArch.entitlements */,
+				524E6FB32B2C40C8005DDB39 /* Info.plist */,
+				524E6FA82B2C31AF005DDB39 /* GoogleService-Info.plist */,
 				522E7A5A2AD036790098339E /* Preview Content */,
 				522E7A7C2AD039990098339E /* Controllerr */,
 				522E7A542AD036780098339E /* SwiftUIMvvmArchApp.swift */,
@@ -95,6 +144,7 @@
 				522E7A792AD0397D0098339E /* Baseclass */,
 				522E7A662AD038860098339E /* Helper */,
 				52A4D3BD2AD3EA3E0081C589 /* LodderView.swift */,
+				524E6FA62B2C30C8005DDB39 /* AppDelegate.swift */,
 			);
 			path = SwiftUIMvvmArch;
 			sourceTree = "<group>";
@@ -110,7 +160,7 @@
 		522E7A662AD038860098339E /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				522E7A742AD039310098339E /* Constants.swift */,
+				524E6F9B2B2C24F2005DDB39 /* SocialLogin */,
 				522E7A732AD039230098339E /* Constant */,
 				522E7A702AD039060098339E /* NetworkManager */,
 				522E7A6D2AD038D90098339E /* Appdefault */,
@@ -149,6 +199,7 @@
 		522E7A732AD039230098339E /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				522E7A742AD039310098339E /* Constants.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -172,6 +223,7 @@
 		522E7A7C2AD039990098339E /* Controllerr */ = {
 			isa = PBXGroup;
 			children = (
+				526625982B2C840C005878E4 /* Sociallogin */,
 				522E7A7E2AD039C50098339E /* Main */,
 			);
 			path = Controllerr;
@@ -220,6 +272,46 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		524E6F9B2B2C24F2005DDB39 /* SocialLogin */ = {
+			isa = PBXGroup;
+			children = (
+				524E6F9E2B2C24F2005DDB39 /* SocialSignInModel.swift */,
+				524E6FB12B2C3B24005DDB39 /* AuthenticationManager.swift */,
+			);
+			path = SocialLogin;
+			sourceTree = "<group>";
+		};
+		526625982B2C840C005878E4 /* Sociallogin */ = {
+			isa = PBXGroup;
+			children = (
+				526625992B2C8430005878E4 /* SocialLoginView.swift */,
+			);
+			path = Sociallogin;
+			sourceTree = "<group>";
+		};
+		52E819642B45306800FC0358 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				52E819652B45309300FC0358 /* CustomTabBarContainerView.swift */,
+				52E819662B45309300FC0358 /* CustomTabBarView.swift */,
+				52E819672B45309400FC0358 /* TabBarItem.swift */,
+				52E819682B45309400FC0358 /* TabBarItemPrefrenceKey.swift */,
+				52E819632B45305900FC0358 /* CustomTabBarUssageReadme.md */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		52E8196F2B4530EB00FC0358 /* CustomNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				52E819722B45311100FC0358 /* CustomNavBarView.swift */,
+				52E819702B45311000FC0358 /* CustomNavContainerView.swift */,
+				52E819712B45311000FC0358 /* CustomNavView.swift */,
+				52E8196E2B4530D500FC0358 /* customNavigationUssageReadme.md */,
+			);
+			path = CustomNavigationBar;
+			sourceTree = "<group>";
+		};
 		7D377B203BB86DD2E6867FCD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,12 +341,16 @@
 				522E7A4E2AD036780098339E /* Frameworks */,
 				522E7A4F2AD036780098339E /* Resources */,
 				AB17850C014A666A4F67125D /* [CP] Embed Pods Frameworks */,
+				522242A12B31912D00A212DF /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SwiftUIMvvmArch;
+			packageProductDependencies = (
+				526625952B2C6983005878E4 /* Lottie */,
+			);
 			productName = SwiftUIMvvmArch;
 			productReference = 522E7A512AD036780098339E /* SwiftUIMvvmArch.app */;
 			productType = "com.apple.product-type.application";
@@ -283,6 +379,9 @@
 				Base,
 			);
 			mainGroup = 522E7A482AD036780098339E;
+			packageReferences = (
+				526625942B2C6983005878E4 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 522E7A522AD036780098339E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,8 +396,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524E6FA92B2C31AF005DDB39 /* GoogleService-Info.plist in Resources */,
 				522E7A5C2AD036790098339E /* Preview Assets.xcassets in Resources */,
 				522E7A592AD036790098339E /* Assets.xcassets in Resources */,
+				52E8196D2B4530A000FC0358 /* CustomTabBarUssageReadme.md in Resources */,
 				52A4D3C02AD3F0420081C589 /* animation_lnimmxl6.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,21 +453,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E8196A2B45309400FC0358 /* CustomTabBarView.swift in Sources */,
 				522E7A682AD038920098339E /* HelperClass.swift in Sources */,
 				522E7A722AD0391A0098339E /* NetworkMonitor.swift in Sources */,
 				522E7A6F2AD038E80098339E /* AppDefault.swift in Sources */,
+				52E8196B2B45309400FC0358 /* TabBarItem.swift in Sources */,
+				52E819752B45311100FC0358 /* CustomNavBarView.swift in Sources */,
 				527A6F6B2B174C4900AD0DEC /* NetworkView.swift in Sources */,
+				52E8196C2B45309400FC0358 /* TabBarItemPrefrenceKey.swift in Sources */,
 				522E7A852AD03A210098339E /* ViewModel.swift in Sources */,
 				522E7A572AD036780098339E /* ContentView.swift in Sources */,
+				524E6FA22B2C2502005DDB39 /* SocialSignInModel.swift in Sources */,
+				524E6FB22B2C3B24005DDB39 /* AuthenticationManager.swift in Sources */,
 				522E7A7B2AD0398F0098339E /* BaseVC.swift in Sources */,
+				524E6FA72B2C30C8005DDB39 /* AppDelegate.swift in Sources */,
+				52E819732B45311100FC0358 /* CustomNavContainerView.swift in Sources */,
 				522E7A782AD0395A0098339E /* AppResponse.swift in Sources */,
 				522E7A882AD03A370098339E /* model.swift in Sources */,
 				522E7A752AD039320098339E /* Constants.swift in Sources */,
+				52E819742B45311100FC0358 /* CustomNavView.swift in Sources */,
 				522E7A6C2AD038C40098339E /* ApiService.swift in Sources */,
 				52A4D3BE2AD3EA3E0081C589 /* LodderView.swift in Sources */,
 				522E7A812AD039E70098339E /* ApiRequest.swift in Sources */,
+				5266259A2B2C8430005878E4 /* SocialLoginView.swift in Sources */,
 				527A6F6D2B17696700AD0DEC /* NetworkPresenter.swift in Sources */,
 				522E7A552AD036780098339E /* SwiftUIMvvmArchApp.swift in Sources */,
+				52E819692B45309400FC0358 /* CustomTabBarContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +610,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIMvvmArch/SwiftUIMvvmArch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMvvmArch/Preview Content\"";
@@ -505,6 +618,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIMvvmArch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -518,9 +632,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftUIMvvmArch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -530,6 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUIMvvmArch/SwiftUIMvvmArch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMvvmArch/Preview Content\"";
@@ -537,6 +654,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIMvvmArch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,9 +668,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftUIMvvmArch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -578,6 +698,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		526625942B2C6983005878E4 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		526625952B2C6983005878E4 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 526625942B2C6983005878E4 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 522E7A492AD036780098339E /* Project object */;
 }

@@ -7,6 +7,11 @@ target 'SwiftUIMvvmArch' do
 
   # Pods for SwiftUIMvvmArch
 pod 'Alamofire', '~> 5.6'
-pod 'lottie-ios'
+pod 'Firebase', '~> 10.19'
+pod 'GoogleSignIn', '7.1.0-fac-eap-1.0.0'
+pod 'FBSDKLoginKit', '~> 16.3'
+pod 'FirebaseAuth', '~> 10.19'
+pod 'FirebaseFunctions', '~> 10.19'
+
 
 end
