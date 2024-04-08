@@ -56,21 +56,30 @@ class APIService{
 
     
 //MARK: MULTIPLEA API GENRIC FUNCTION
-    func MultipleAPI<T: Decodable>(endpoints: [String], objectType: T.Type) -> AnyPublisher<[T], Error> {
-        let requests = endpoints.map { endpoint -> AnyPublisher<T, Error> in
 
-            let url = URL(string: "\(Constant.BASEURL)\(endpoint)")!
-            return sessionManager.request(url, method: .get, parameters: [:], headers: headers)
-                .validate()
-                .publishDecodable(type: objectType)
-                .value()
-                .mapError { $0 as Error }
-                .eraseToAnyPublisher()
-        }
-        return Publishers.MergeMany(requests)
-            .collect()
-            .eraseToAnyPublisher()
-    }
+ 
+    
+    func multipleApiCalling<T: Decodable>(from url: URL, model: T.Type) -> AnyPublisher<T, Error> {
+           return Future { promise in
+               AF.request(url, method: .get).responseData { response in
+                   switch response.result {
+                   case .success(let data):
+                       do {
+                           let decoder = JSONDecoder()
+                           let modelData = try decoder.decode(T.self, from: data)
+                           promise(.success(modelData))
+                       } catch {
+                           promise(.failure(error))
+                       }
+                   case .failure(let error):
+                       promise(.failure(error))
+                   }
+               }
+           }
+           .eraseToAnyPublisher()
+       }
+   
+
    
 
     
@@ -125,6 +134,7 @@ class APIService{
                 }
                 multipartFormData.append(imageData, withName: "image", fileName: imageName, mimeType: "image/jpeg")
             }, to: url, method: .post)
+         
             .debugLog()
             .responseDecodable(of: objectType) { response in
                 switch response.result {

@@ -11,8 +11,8 @@ import Combine
 
 struct Constant {
     
-//    static let BASEURL = "https://swapi.dev/api/"
-    static let BASEURL = "https://restcountries.com/v3.1/"
+    static let BASEURL = "https://swapi.dev/api/"
+//    static let BASEURL = "https://restcountries.com/v3.1/"
 
 
 //    static let BASEURL = "https://dummy.restapiexample.com/api/v1/"

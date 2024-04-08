@@ -17,50 +17,69 @@ struct ContentView: View {
     
     
     @ObservedObject var viewModel: ViewModel = ViewModel()
+    
+    
     @State private var isLoaderShowing = false
     @State private var showErrorAlert = false
     
     @State private var isSocialLofinScreen = false
+   
     
+    let apiService2: APIService2
+    @ObservedObject var viewModel2: DIViewModel
+       
+       init() {
+           self.apiService2 = APIService2(networkService: NetworkManager())
+           self.viewModel2 = DIViewModel(apiService2: self.apiService2)
+       }
     
     var body: some View {
 
           
             ZStack {
                 
-                VStack{
-                  
-                    Button {
-                        isSocialLofinScreen = true
-                    } label: {
-                        Text("navigate to social login")
-                            .font(.system(size: 16))
+                if #available(iOS 17.0, *) {
+                    VStack{
+                        
+                        Button {
+                            isSocialLofinScreen = true
+                        } label: {
+                            Text("navigate to social login")
+                                .font(.system(size: 16))
+                        }
+                        //                    let pers = viewModel2.appResponse.person
+                        let pers = viewModel2.person
+                        Button(action: {
+                            viewModel2.fetchDataFromAPI()
+                            //                        viewModel.getPerson() 
+                        }) {
+                            Text("Hit API")
+                                .font(.system(size: 16))
+                        }
+                        .padding()
+                        Spacer()
+                        //MARK: single dictionary data
+                        Text("Name: \(viewModel2.person.name ?? (AppDefaults.userData?.name ?? "ishpreet"))")
+                        Spacer()
+                        Text("Height: \(pers.height ?? (AppDefaults.userData?.height ?? "184"))")
+                        //                                          Spacer()
+                        //MARK: array dictionary data
+                        //                    List(viewModel.appResponse.country, id: \.cca2) { country in
+                        //                        Text(country.name?.common ?? "")
+                        //                    }
+                        
+                        
                     }
-                    let _ = viewModel.appResponse.country
-                    Button(action: {
-                        viewModel.getPerson()
-                    }) {
-                        Text("Hit API")
-                            .font(.system(size: 16))
-                    }
-                    .padding()
-                    Spacer()
-                    //MARK: single dictionary data
-                    //                    Text("Name: \(person.name ?? (AppDefaults.userData?.name ?? "ishpreet"))")
-                    //                      Spacer()
-                    //                    Text("Height: \(person.height ?? (AppDefaults.userData?.height ?? "184"))")
-                    //                      Spacer()
-                    //MARK: array dictionary data
-                    List(viewModel.appResponse.country, id: \.cca2) { country in
-                        Text(country.name?.common ?? "")
-                    }
-                    
-                    
+                    .onChange(of: viewModel2.person, { oldValue, newValue in
+                        print(newValue)
+                    })
+                    .opacity(viewModel2.isLoading ? 0.5 : 1.0)
+                } else {
+                    // Fallback on earlier versions
                 }
-                .opacity(viewModel.isLoading ? 0.5 : 1.0)
                 
                 
-                if viewModel.isLoading {
+                if viewModel2.isLoading {
                     
                     LoaderView(isShowing: $isLoaderShowing)
                         .onAppear {

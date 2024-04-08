@@ -11,6 +11,7 @@
 
 struct AppResponse {
     var person : Person = Person()
+    var person2 : Person2 = Person2()
     var Apppint: Appointment = Appointment()
     var postExa: postRes = postRes()
     var createuUser: createuser = createuser()
